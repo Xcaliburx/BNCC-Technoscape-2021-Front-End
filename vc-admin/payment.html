@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="../asset/css/payment.css">
+</head>
+<body>
+    <div class="background">
+        <div class="sidebar">
+            <img class="logo" src="../asset/img/TechnoScape_Horizontal_W.png" alt="">
+
+            <div class="bar">
+                <button class="button" onclick="dropDown('technoscape')">
+                    <p>Technoscape</p>
+                    <img id="technoscapeimg" src="../asset/img/arrow-down.png" alt="">
+                </button>
+            </div>      
+            <div id="technoscape" class="drop">
+                <a href="../technoscape-admin/participant.html"> <p>Participant</p> </a>
+                <a href="../technoscape-admin/no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+
+            <div class="bar">
+                <button class="button" onclick="dropDown('hackathon')">
+                    <p>Hackathon</p>
+                    <img id="hackathonimg" src="../asset/img/arrow-down.png" alt="">
+                </button>
+            </div>
+            <div id="hackathon" class="drop">
+                <a href="../hackathon-admin/participant.html"> <p>Participant</p> </a>
+                <a href="../hackathon-admin/payment.html"> <p>Payment</p> </a>
+                <a href="../hackathon-admin/no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+            
+            <div class="bar activebar">
+                <button class="button" onclick="dropDown('virtualconf')">
+                    <p>Virtual Conference</p>
+                    <img id="virtualconfimg" src="../asset/img/arrow-up.png" alt="">
+                </button>
+            </div>
+            <div id="virtualconf" class="drop activedrop view">
+                <a href="participant.html"> <p>Participant</p> </a>
+                <a class="activemenu" href="payment.html"> <p>Payment</p> </a>
+                <a href="no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+
+            <div class="bar">
+                <button class="button" onclick="dropDown('devworkshop')">
+                    <p>Developer Workshop</p>
+                    <img id="devworkshopimg" src="../asset/img/arrow-down.png" alt="">
+                </button>
+            </div>
+            <div id="devworkshop" class="drop">
+                <a href="../dw-admin/participant.html"> <p>Participant</p> </a>
+                <a href="../dw-admin/payment.html"> <p>Payment</p> </a>
+                <a href="../dw-admin/no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+
+            <a class="logout bar" href="../logout.html">
+                <p>Logout</p>
+            </a>
+ 
+        </div>
+
+        <div class="content">
+            <p>Payment</p>
+            <div class="list=payment">
+                <div class="payment-list">
+                    <div class="status-name">
+                        <h1>Participant Name</h1>
+                        <h2 class="verified">Verified</h2>
+                    </div>
+                    <h3>Rp 50.000</h3>
+                    <button class="verify-payment" id="verify" onclick="validatePayment('verify')" >Verify</button>
+                    <button class="reject-payment" id="reject" onclick="validatePayment('reject')">Reject</button>
+                    <button class="eye">
+                        <img id="announcement1img" src="../asset/img/eye.svg" alt="">
+                    </button>
+                </div>
+    
+                <div class="payment-list">
+                    <div class="status-name">
+                        <h1>Participant Name</h1>
+                        <h2 class="rejected">Rejected</h2>
+                    </div>
+                    <h3>Rp 50.000</h3>
+                    <button class="verify-payment" id="verify" onclick="validatePayment('verify')" >Verify</button>
+                    <button class="reject-payment" id="reject" onclick="validatePayment('reject')">Reject</button>
+                    <button class="eye">
+                        <img id="announcement1img" src="../asset/img/eye.svg" alt="">
+                    </button>
+                </div>
+    
+                <div class="payment-list">
+                    <div class="status-name">
+                        <h1>Participant Name</h1>
+                        <h2 class="unverified">Unverified</h2>
+                    </div>
+                    <h3>Rp 50.000</h3>
+                    <button class="verify-payment" id="verify" onclick="validatePayment('verify')" >Verify</button>
+                    <button class="reject-payment" id="reject" onclick="validatePayment('reject')">Reject</button>
+                    <button class="eye">
+                        <img id="announcement1img" src="../asset/img/eye.svg" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <div id="rejectmodals" class="modal">
+                <div class="modal-content">
+                    <span id="close-modal" onclick="closeValidate('reject')">&times;</span>
+                    <img src="../asset/img/reject-icon.png" alt="">
+                    <p>Are you sure you want to reject this team's payment?</p>
+                    <h1>Participant Name: [harga pembayaran]</h1>
+                    <div class="confirm-delete">
+                        <a href="payment.html">Go Back</a>
+                        <button>Select</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="verifymodals" class="modal">
+                <div class="modal-content">
+                    <span id="close-modal" onclick="closeValidate('verify')">&times;</span>
+                    <img src="../asset/img/approve-icon.png" alt="">
+                    <p>Are you sure you want to verify this team's payment?</p>
+                    <h1>Participant Name: [harga pembayaran]</h1>
+                    <div class="confirm-delete">
+                        <a href="payment.html">Go Back</a>
+                        <button>Verifiy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../asset/js/admin.js"></script>
+</body>
+</html>

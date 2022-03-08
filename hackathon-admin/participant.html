@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="../asset/css/participant.css">
+</head>
+<body>
+    <div class="background">
+        <div class="sidebar">
+            <img class="logo" src="../asset/img/TechnoScape_Horizontal_W.png" alt="">
+
+            <div class="bar">
+                <button class="button" onclick="dropDown('technoscape')">
+                    <p>Technoscape</p>
+                    <img id="technoscapeimg" src="../asset/img/arrow-down.png" alt="">
+                </button>
+            </div>    
+            <div id="technoscape" class="drop">
+                <a href="../technoscape-admin/participant.html"> <p>Participant</p> </a>
+                <a href="../technoscape-admin/no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+
+            <div class="bar activebar">
+                <button class="button" onclick="dropDown('hackathon')">
+                    <p>Hackathon</p>
+                    <img id="hackathonimg" src="../asset/img/arrow-up.png" alt="">
+                </button>
+            </div>
+            <div id="hackathon" class="drop activedrop view">
+                <a class="activemenu" href="participant.html"> <p>Participant</p> </a>
+                <a href="payment.html"> <p>Payment</p> </a>
+                <a href="no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+            
+            <div class="bar">
+                <button class="button" onclick="dropDown('virtualconf')">
+                    <p>Virtual Conference</p>
+                    <img id="virtualconfimg" src="../asset/img/arrow-down.png" alt="">
+                </button>
+            </div>
+            <div id="virtualconf" class="drop">
+                <a href="../vc-admin/participant.html"> <p>Participant</p> </a>
+                <a href="../vc-admin/payment.html"> <p>Payment</p> </a>
+                <a href="../vc-admin/no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+
+            <div class="bar">
+                <button class="button" onclick="dropDown('devworkshop')">
+                    <p>Developer Workshop</p>
+                    <img id="devworkshopimg" src="../asset/img/arrow-down.png" alt="">
+                </button>
+            </div>
+            <div id="devworkshop" class="drop">
+                <a href="../dw-admin/participant.html"> <p>Participant</p> </a>
+                <a href="../dw-admin/payment.html"> <p>Payment</p> </a>
+                <a href="../dw-admin/no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+
+            <a class="logout bar" href="../logout.html">
+                <p>Logout</p>
+            </a>
+ 
+        </div>
+
+        <div class="content">
+            <p>Participants</p>
+            <div class="list-participant">
+                <div class="participant-list">
+                    <div class="participant-title">
+                        <h1>Team Name</h1>
+                        <a class="edit-participant" href="edit-participant.html">Edit</a>
+                        <a class="view-participant" href="view-participant.html">View</a>
+                        <button id="deleteParticipant1" onclick="openModal('deleteParticipant1')">
+                            <img id="announcement1img" src="../asset/img/trash-can.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="participant-list">
+                    <div class="participant-title">
+                        <h1>Team Name</h1>
+                        <a class="edit-participant" href="edit-participant.html">Edit</a>
+                        <a class="view-participant" href="view-participant.html">View</a>
+                        <button id="deleteParticipant2" onclick="openModal('deleteParticipant2')">
+                            <img id="announcement1img" src="../asset/img/trash-can.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modals" class="modal">
+                <div class="modal-content">
+                    <span id="close-modal" onclick="closeModal()">&times;</span>
+                    <img src="../asset/img/trash-can-white.png" alt="">
+                    <p>Are you sure you want to delete this team?</p>
+                    <h1>Team Name</h1>
+                    <div class="confirm-delete">
+                        <a href="participant.html">Go Back</a>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../asset/js/admin.js"></script>
+</body>
+</html>

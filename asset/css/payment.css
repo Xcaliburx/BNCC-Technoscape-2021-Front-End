@@ -1,0 +1,349 @@
+@font-face {
+    font-family: Inter;
+    src: url("../font/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: Inter;
+}
+
+.background{
+    background-color: #262859;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar{
+    width: 30%;
+    background-color: #3B3E89;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar img{
+    max-height: 35px;
+    margin-left: 10px;
+}
+
+.logo{
+    width: 200px;
+    margin-bottom: 20px;
+    padding-left: 40px;
+}
+
+.bar{
+    margin-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.bar p{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+.bar button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.button img{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+}
+
+.drop{
+    display: none;
+    padding-top: 10px;
+    padding-left: 70px;
+    padding-bottom: 30px;
+    position:relative;
+    animation:animatetop 0.4s
+}
+
+@keyframes animatetop{
+    from{top:-50px;
+        opacity:0} 
+    to{top:0;
+        opacity:1}
+}
+
+.drop p{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+.drop p:hover{
+    color: #B5CFFC;
+}
+
+.drop p{
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.logout{
+    margin-top: auto;
+}
+
+.activedrop{
+    background-color: #2F3167;
+}
+
+.activebar{
+    background-color: #282A64;
+}
+
+.activebar p{
+    color: #B5CFFC;
+}
+
+.activemenu p{
+    color: #B5CFFC;
+    font-weight: 700;
+}
+
+.content{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 40px;
+    width: 100%;
+}
+
+.content p{
+    color: #B5CFFC;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.view{
+    display: block;
+}
+
+/* payment */
+.payment-list{
+    width: 95%;
+    background-color: transparent;
+    outline: none;
+    background-image: radial-gradient(88.77% 88.77% at 25.41% 9.11%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 20px 30px;
+}
+
+.status-name{
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-list h1{
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.payment-list h2{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.verified{
+    background: linear-gradient(151.12deg, #5FA8ED 19.15%, #7ED5B7 91.38%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.rejected{
+    color: #FC5D5D;
+}
+
+.unverified{
+    color: #B5CFFC;
+}
+
+.payment-list h3{
+    font-weight: 400;
+    font-size: 20px;
+    color: #F4F4F4;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 50px;
+    opacity: 80%;
+}
+
+.verify-payment{
+    background: none;
+    outline: none;
+    background-image: linear-gradient(180deg, #EBAF8D -22.64%, #D1534B 91.54%);
+    padding: 10px 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Inter;
+    border-radius: 32px;
+    margin-left: auto;
+}
+
+.reject-payment{
+    background: none;
+    outline: none;
+    background-image: radial-gradient(88.77% 88.77% at 25.41% 9.11%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    padding: 10px 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Inter;
+    border-radius: 32px;
+    border: 1px solid #D1534B;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.eye{
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: none;
+    outline: none;
+    border: none;
+    margin-left: 30px;
+}
+
+.eye img{
+    height: 30px;
+}
+
+/* Modal */
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 65%;
+    height: 65%;
+    background-image: radial-gradient(88.77% 88.77% at 25.41% 9.11%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    border: 1px solid (255, 255, 255, 0.4);
+    padding: 5px 20px;
+    margin: auto;
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
+}
+
+.modal-content span{
+    display: block;
+    font-size: 48px;
+    font-weight: 400;
+    color: #9D9D9D;
+    text-align: right;
+    cursor: pointer;
+}
+
+.modal-content img{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.modal-content p{
+    margin: 0;
+    font-size: 24px;
+    color: #F4F4F4;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.modal-content h1{
+    font-size: 36px;
+    color: #F4F4F4;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.confirm-delete{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.modal-content img{
+    height: 130px;
+}
+
+.modal-content a{
+    background-image: radial-gradient(88.77% 88.77% at 25.41% 9.11%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    padding: 10px 60px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Inter;
+    text-decoration: none;
+    border-radius: 32px;
+    border: 1px solid #D1534B;
+}
+
+.modal-content button{
+    background-image: linear-gradient(180deg, #EBAF8D -22.64%, #D1534B 91.54%);
+    padding: 10px 60px;
+    outline: none;
+    color: #F4F4F4;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Inter;
+    border-radius: 32px;
+}

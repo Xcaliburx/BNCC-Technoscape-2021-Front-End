@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="../asset/css/participant.css">
+</head>
+<body>
+    <div class="background">
+        <div class="sidebar">
+            <img class="logo" src="../asset/img/TechnoScape_Horizontal_W.png" alt="">
+
+            <div class="bar">
+                <button class="button" onclick="dropDown('technoscape')">
+                    <p>Technoscape</p>
+                    <img id="technoscapeimg" src="../asset/img/arrow-down.png" alt="">
+                </button>
+            </div>     
+            <div id="technoscape" class="drop">
+                <a href="../technoscape-admin/participant.html"> <p>Participant</p> </a>
+                <a href="../technoscape-admin/no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+
+            <div class="bar">
+                <button class="button" onclick="dropDown('hackathon')">
+                    <p>Hackathon</p>
+                    <img id="hackathonimg" src="../asset/img/arrow-down.png" alt="">
+                </button>
+            </div>
+            <div id="hackathon" class="drop">
+                <a href="../hackathon-admin/participant.html"> <p>Participant</p> </a>
+                <a href="../hackathon-admin/payment.html"> <p>Payment</p> </a>
+                <a href="../hackathon-admin/no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+            
+            <div class="bar">
+                <button class="button" onclick="dropDown('virtualconf')">
+                    <p>Virtual Conference</p>
+                    <img id="virtualconfimg" src="../asset/img/arrow-down.png" alt="">
+                </button>
+            </div>
+            <div id="virtualconf" class="drop">
+                <a href="../vc-admin/participant.html"> <p>Participant</p> </a>
+                <a href="../vc-admin/payment.html"> <p>Payment</p> </a>
+                <a href="../vc-admin/no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+
+            <div class="bar activebar">
+                <button class="button" onclick="dropDown('devworkshop')">
+                    <p>Developer Workshop</p>
+                    <img id="devworkshopimg" src="../asset/img/arrow-up.png" alt="">
+                </button>
+            </div>
+            <div id="devworkshop" class="drop activedrop view">
+                <a class="activemenu" href="participant.html"> <p>Participant</p> </a>
+                <a href="payment.html"> <p>Payment</p> </a>
+                <a href="no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+
+            <a class="logout bar" href="../logout.html">
+                <p>Logout</p>
+            </a>
+ 
+        </div>
+
+        <div class="content">
+            <p>Participants/ <span class="text-white">Edit</span></p>
+            <div class="content-box">
+                <h1>{user.name}</h1>
+                <form action="">
+                    <div class="data">
+                        <label for="">Full Name</label>
+                        <div>
+                            <img src="../asset/img/person.svg" alt="">
+                            <input type="text" value="budi setiawan">
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="data">
+                        <label for="">Place of Birth</label>
+                        <div>
+                            <img src="../asset/img/location.svg" alt="">
+                            <input type="text" value="bumi">
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="data">
+                        <label for="">Date of Birth</label>
+                        <div>
+                            <img src="../asset/img/calendar.svg" alt="">
+                            <input type="date" value="2022-03-22">
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="data">
+                        <label for="">Gender</label>
+                        <div>
+                            <img src="../asset/img/gender.svg" alt="">
+                            <input type="text" value="Male">
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="data">
+                        <label for="">Email</label>
+                        <div>
+                            <img src="../asset/img/mail.svg" alt="">
+                            <input type="text" value="budisetiawan@gmail.com">
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="data">
+                        <label for="">Password</label>
+                        <div>
+                            <img src="../asset/img/password.svg" alt="">
+                            <input id="password" type="password" value="asdasdassdad">
+                            <button type="button" onclick="return showPass()"><img src="../asset/img/eye.svg" alt=""></button>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="data">
+                        <label for="">Status</label>
+                        <div>
+                            <img src="../asset/img/status.svg" alt="">
+                            <input type="text" value="binusian">
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="data">
+                        <label for="">LINE ID</label>
+                        <div>
+                            <img src="../asset/img/line.svg" alt="">
+                            <input type="text" value="budi_s">
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="data">
+                        <label for="">Whatsapp Number</label>
+                        <div>
+                            <img src="../asset/img/wa.svg" alt="">
+                            <input type="text" value="084535235252">
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="data">
+                        <label for="">Company/ Institute</label>
+                        <div>
+                            <img src="../asset/img/company.svg" alt="">
+                            <input type="text" value="binus">
+                        </div>
+                        <hr>
+                    </div>
+                    
+                    <button type="button" onclick="openModal('saveupdate')" id="saveupdate" class="save-update">Save Changes</button>
+                </form>
+            </div>
+
+            <div id="modals" class="modal">
+                <div class="modal-content">
+                    <span id="close-modal" onclick="closeModal()">&times;</span>
+                    <img src="../asset/img/save-icon.png" alt="">
+                    <p>Are you sure you want to make changes to this participant?</p>
+                    <h1>Participant Name</h1>
+                    <div class="confirm-delete">
+                        <a href="">Go Back</a>
+                        <button>Save Changes</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="../asset/js/admin.js"></script>
+</body>
+</html>

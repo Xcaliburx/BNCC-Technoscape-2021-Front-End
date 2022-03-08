@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="../asset/css/announcement.css">
+</head>
+<body>
+    <div class="background">
+        <div class="sidebar">
+            <img class="logo" src="../asset/img/TechnoScape_Horizontal_W.png" alt="">
+
+            <div class="bar">
+                <button class="button" onclick="dropDown('technoscape')">
+                    <p>Technoscape</p>
+                    <img id="technoscapeimg" src="../asset/img/arrow-down.png" alt="">
+                </button>
+            </div>    
+            <div id="technoscape" class="drop">
+                <a href="../technoscape-admin/participant.html"> <p>Participant</p> </a>
+                <a href="../technoscape-admin/no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+
+            <div class="bar activebar">
+                <button class="button" onclick="dropDown('hackathon')">
+                    <p>Hackathon</p>
+                    <img id="hackathonimg" src="../asset/img/arrow-up.png" alt="">
+                </button>
+            </div>
+            <div id="hackathon" class="drop activedrop view">
+                <a href="participant.html"> <p>Participant</p> </a>
+                <a href="payment.html"> <p>Payment</p> </a>
+                <a class="activemenu" href="no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+            
+            <div class="bar">
+                <button class="button" onclick="dropDown('virtualconf')">
+                    <p>Virtual Conference</p>
+                    <img id="virtualconfimg" src="../asset/img/arrow-down.png" alt="">
+                </button>
+            </div>
+            <div id="virtualconf" class="drop">
+                <a href="../vc-admin/participant.html"> <p>Participant</p> </a>
+                <a href="../vc-admin/payment.html"> <p>Payment</p> </a>
+                <a href="../vc-admin/no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+
+            <div class="bar">
+                <button class="button" onclick="dropDown('devworkshop')">
+                    <p>Developer Workshop</p>
+                    <img id="devworkshopimg" src="../asset/img/arrow-down.png" alt="">
+                </button>
+            </div>
+            <div id="devworkshop" class="drop">
+                <a href="../dw-admin/participant.html"> <p>Participant</p> </a>
+                <a href="../dw-admin/payment.html"> <p>Payment</p> </a>
+                <a href="../dw-admin/no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+
+            <a class="logout bar" href="../logout.html">
+                <p>Logout</p>
+            </a>
+ 
+        </div>
+
+        <div class="content">
+            <p>Announcement</p>
+            <div class="list-announcement">
+                <a href="add-announcement.html">Add Announcement +</a>
+
+                <div class="announcement-list">
+                    <button class="announcement-title" onclick="dropDown('announcement1')">
+                        <h1>Besok Binus Libur Total</h1>
+                        <p>Sent Mar 9th 2021, 22:03</p>
+                        <img id="announcement1img" src="../asset/img/arrow-up.png" alt="">
+                    </button>
+
+                    <div class="announcement-content view" id="announcement1">
+                        <h1>Besok Binus Libur Total</h1>
+                        <hr>
+                        <div class="file-attached">
+                            <p>Pengumuman rektor besok libur yey.pdf</p>
+                            <a href=""><img src="../asset/img/download.png" alt=""></a>
+                        </div>
+                        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut reiciendis neque repellat quia fuga explicabo, totam repellendus accusantium alias deleniti voluptas, cumque facere nam impedit necessitatibus tempore nulla magnam exercitationem.</h3>
+                    </div>
+                </div>
+
+                <div class="announcement-list">
+                    <button class="announcement-title" onclick="dropDown('announcement2')">
+                        <h1>Hari ini hari selasa</h1>
+                        <p>Sent Mar 8th 2021, 22:03</p>
+                        <img id="announcement2img" src="../asset/img/arrow-down.png" alt="">
+                    </button>
+
+                    <div class="announcement-content" id="announcement2">
+                        <h1>Hari ini hari Selasa</h1>
+                        <hr>
+                        <div class="file-attached">
+                            <p>Hari ini hari Selasa yey.pdf</p>
+                            <a href=""><img src="../asset/img/download.png" alt=""></a>
+                        </div>
+                        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut reiciendis neque repellat quia fuga explicabo, totam repellendus accusantium alias deleniti voluptas, cumque facere nam impedit necessitatibus tempore nulla magnam exercitationem.</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="../asset/js/admin.js"></script>
+</body>
+</html>

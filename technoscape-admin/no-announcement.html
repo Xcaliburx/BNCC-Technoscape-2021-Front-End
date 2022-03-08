@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="../asset/css/announcement.css">
+</head>
+<body>
+    <div class="background">
+        <div class="sidebar">
+            <img class="logo" src="../asset/img/TechnoScape_Horizontal_W.png" alt="">
+
+            <div class="bar activebar">
+                <button class="button" onclick="dropDown('technoscape')">
+                    <p>Technoscape</p>
+                    <img id="technoscapeimg" src="../asset/img/arrow-up.png" alt="">
+                </button>
+            </div>    
+            <div id="technoscape" class="drop activedrop view">
+                <a href="participant.html"> <p>Participant</p> </a>
+                <a class="activemenu" href="no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+
+            <div class="bar">
+                <button class="button" onclick="dropDown('hackathon')">
+                    <p>Hackathon</p>
+                    <img id="hackathonimg" src="../asset/img/arrow-down.png" alt="">
+                </button>
+            </div>
+            <div id="hackathon" class="drop">
+                <a href="../hackathon-admin/participant.html"> <p>Participant</p> </a>
+                <a href="../hackathon-admin/payment.html"> <p>Payment</p> </a>
+                <a href="../hackathon-admin/no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+            
+            <div class="bar">
+                <button class="button" onclick="dropDown('virtualconf')">
+                    <p>Virtual Conference</p>
+                    <img id="virtualconfimg" src="../asset/img/arrow-down.png" alt="">
+                </button>
+            </div>
+            <div id="virtualconf" class="drop">
+                <a href="../vc-admin/participant.html"> <p>Participant</p> </a>
+                <a href="../vc-admin/payment.html"> <p>Payment</p> </a>
+                <a href="../vc-admin/no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+
+            <div class="bar">
+                <button class="button" onclick="dropDown('devworkshop')">
+                    <p>Developer Workshop</p>
+                    <img id="devworkshopimg" src="../asset/img/arrow-down.png" alt="">
+                </button>
+            </div>
+            <div id="devworkshop" class="drop">
+                <a href="../dw-admin/participant.html"> <p>Participant</p> </a>
+                <a href="../dw-admin/payment.html"> <p>Payment</p> </a>
+                <a href="../dw-admin/no-announcement.html">  <p>Announcement</p> </a>
+            </div>
+
+            <a class="logout bar" href="../logout.html">
+                <p>Logout</p>
+            </a>
+ 
+        </div>
+
+        <div class="content">
+            <p>Announcement</p>
+            <div class="content-box">
+                <h1>There is no announcement!</h1>
+                <p>There is currently no announcement for the participant</p>
+                <a href="add-announcement.html">Add Announcement +</a>
+            </div>
+        </div>
+    </div>
+    <script src="../asset/js/admin.js"></script>
+</body>
+</html>
